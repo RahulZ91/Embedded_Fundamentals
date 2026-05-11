@@ -317,6 +317,7 @@ int main(void)
 {
  800035c:	b580      	push	{r7, lr}
  800035e:	af00      	add	r7, sp, #0
+	// Initializing the user button
 	button_init();
  8000360:	f7ff ff6e 	bl	8000240 <button_init>
 

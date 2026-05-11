@@ -4,7 +4,6 @@
 
 int main(void)
 {
-	// Initializing the user button
 	button_init();
 
 	button_EXTI();
