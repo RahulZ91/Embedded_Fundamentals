@@ -23,7 +23,7 @@ void button_init(void)
 void button_EXTI(void)
 {
 	//Enable clock for SYSCFG
-	RCC->AHB2ENR |= (1<<14);
+	RCC->APB2ENR |= (1<<14);
 	// Since the button is at Port C pin 13 - the extr is register 3
 	SYSCFG->EXTICR[3] &= ~(0xF << 4);   // clear selection
 	SYSCFG->EXTICR[3] |=  (0x2 << 4);   // PC = 0010

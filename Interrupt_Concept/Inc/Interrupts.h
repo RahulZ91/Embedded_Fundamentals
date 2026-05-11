@@ -8,6 +8,7 @@
 #ifndef INTERRUPTS_H_
 #define INTERRUPTS_H_
 
-
+void USR_LED_Init(void);
+void USR_LED_Toggle(void);
 
 #endif /* INTERRUPTS_H_ */

@@ -1,5 +1,14 @@
-17:44:25 **** Incremental Build of configuration Debug for project Interrupt_Concept ****
+15:51:58 **** Clean-only build of configuration Debug for project Interrupt_Concept ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32f446retx.d ./Startup/startup_stm32f446retx.o
+rm -rf ./Src/GPIO_Driver.cyclo ./Src/GPIO_Driver.d ./Src/GPIO_Driver.o ./Src/GPIO_Driver.su ./Src/Interrupts.cyclo ./Src/Interrupts.d ./Src/Interrupts.o ./Src/Interrupts.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf Interrupt_Concept.elf Interrupt_Concept.list Interrupt_Concept.map default.size.stdout
+ 
+15:52:05 **** Build of configuration Debug for project Interrupt_Concept ****
 make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc "../Src/GPIO_Driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/GPIO_Driver.d" -MT"Src/GPIO_Driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/GPIO_Driver.o"
+arm-none-eabi-gcc "../Src/Interrupts.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/Interrupts.d" -MT"Src/Interrupts.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/Interrupts.o"
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
 arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
 arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
@@ -9,40 +18,29 @@ Finished building target: Interrupt_Concept.elf
 arm-none-eabi-size  Interrupt_Concept.elf 
 arm-none-eabi-objdump -h -S Interrupt_Concept.elf  > "Interrupt_Concept.list"
    text	   data	    bss	    dec	    hex	filename
-    720	      0	   1568	   2288	    8f0	Interrupt_Concept.elf
+   1068	      0	   1568	   2636	    a4c	Interrupt_Concept.elf
 Finished building: default.size.stdout
  
 Finished building: Interrupt_Concept.list
  
-22:16:41 **** Incremental Build of configuration Debug for project Interrupt_Concept ****
+15:52:09 **** Incremental Build of configuration Debug for project Interrupt_Concept ****
 make -j8 all 
-arm-none-eabi-gcc "../Src/GPIO_Driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/GPIO_Driver.d" -MT"Src/GPIO_Driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/GPIO_Driver.o"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "Interrupt_Concept.elf" @"objects.list"   -mcpu=cortex-m4 -T"F:\Knowledge_Update\Fundamentals\Embedded_Fundamentals\Interrupt_Concept\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Interrupt_Concept.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Interrupt_Concept.elf
- 
 arm-none-eabi-size  Interrupt_Concept.elf 
-arm-none-eabi-objdump -h -S Interrupt_Concept.elf  > "Interrupt_Concept.list"
    text	   data	    bss	    dec	    hex	filename
-    720	      0	   1568	   2288	    8f0	Interrupt_Concept.elf
+   1068	      0	   1568	   2636	    a4c	Interrupt_Concept.elf
 Finished building: default.size.stdout
  
-Finished building: Interrupt_Concept.list
- 
-22:18:26 **** Incremental Build of configuration Debug for project Interrupt_Concept ****
+15:57:46 **** Incremental Build of configuration Debug for project Interrupt_Concept ****
 make -j8 all 
-arm-none-eabi-gcc "../Src/GPIO_Driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/GPIO_Driver.d" -MT"Src/GPIO_Driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/GPIO_Driver.o"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "Interrupt_Concept.elf" @"objects.list"   -mcpu=cortex-m4 -T"F:\Knowledge_Update\Fundamentals\Embedded_Fundamentals\Interrupt_Concept\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Interrupt_Concept.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Interrupt_Concept.elf
- 
 arm-none-eabi-size  Interrupt_Concept.elf 
-arm-none-eabi-objdump -h -S Interrupt_Concept.elf  > "Interrupt_Concept.list"
    text	   data	    bss	    dec	    hex	filename
-    720	      0	   1568	   2288	    8f0	Interrupt_Concept.elf
+   1068	      0	   1568	   2636	    a4c	Interrupt_Concept.elf
 Finished building: default.size.stdout
  
-Finished building: Interrupt_Concept.list
+15:58:11 **** Incremental Build of configuration Debug for project Interrupt_Concept ****
+make -j8 all 
+arm-none-eabi-size  Interrupt_Concept.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1068	      0	   1568	   2636	    a4c	Interrupt_Concept.elf
+Finished building: default.size.stdout
  

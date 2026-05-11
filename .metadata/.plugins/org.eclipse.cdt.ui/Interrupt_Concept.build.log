@@ -1,18 +1,10 @@
-22:18:26 **** Incremental Build of configuration Debug for project Interrupt_Concept ****
+15:58:11 **** Incremental Build of configuration Debug for project Interrupt_Concept ****
 make -j8 all 
-arm-none-eabi-gcc "../Src/GPIO_Driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/GPIO_Driver.d" -MT"Src/GPIO_Driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/GPIO_Driver.o"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "Interrupt_Concept.elf" @"objects.list"   -mcpu=cortex-m4 -T"F:\Knowledge_Update\Fundamentals\Embedded_Fundamentals\Interrupt_Concept\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Interrupt_Concept.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Interrupt_Concept.elf
- 
 arm-none-eabi-size  Interrupt_Concept.elf 
-arm-none-eabi-objdump -h -S Interrupt_Concept.elf  > "Interrupt_Concept.list"
    text	   data	    bss	    dec	    hex	filename
-    720	      0	   1568	   2288	    8f0	Interrupt_Concept.elf
+   1068	      0	   1568	   2636	    a4c	Interrupt_Concept.elf
 Finished building: default.size.stdout
  
-Finished building: Interrupt_Concept.list
- 
 
-22:18:28 Build Finished. 0 errors, 0 warnings. (took 1s.450ms)
+15:58:11 Build Finished. 0 errors, 0 warnings. (took 346ms)
 

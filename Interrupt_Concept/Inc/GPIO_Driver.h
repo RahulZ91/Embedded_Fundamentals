@@ -9,5 +9,7 @@
 #define GPIO_DRIVER_H_
 #include "stm32f4xx.h"
 
+void button_init(void);
+void button_EXTI(void);
 
 #endif /* GPIO_DRIVER_H_ */
