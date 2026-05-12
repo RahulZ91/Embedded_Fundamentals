@@ -1,0 +1,3 @@
+../Src/Interrupts.c:11:6:EXTI15_10_IRQHandler	2
+../Src/Interrupts.c:26:6:USR_LED_Init	1
+../Src/Interrupts.c:37:6:USR_LED_Toggle	1
