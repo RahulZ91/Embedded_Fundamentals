@@ -15,7 +15,7 @@ void timer_init(void)
 
 	//Configure the timer
 	TIM2->PSC =15999; // 16000 - 1
-	TIM2->ARR =2999; //3000 - 1
+	TIM2->ARR =999; //1000 - 1
 
 	//Enable timer
 	TIM2->CR1 |=(1<<0);

@@ -39,14 +39,3 @@ void USR_LED_Toggle(void)
 	// Toggle
 	GPIOA->ODR ^=(1<<5);
 }
-
-void TIM2_IRQHandler(void)
-{
-	//check the UID bit
-	if(TIM2->DIER & (1<<0))
-	{
-		USR_LED_Toggle();
-	}
-
-	TIM2->DIER &=~(1<<0);
-}
