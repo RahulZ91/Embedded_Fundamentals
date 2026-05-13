@@ -1,0 +1,4 @@
+../Src/Interrupts.c:11:6:EXTI15_10_IRQHandler	8	static
+../Src/Interrupts.c:26:6:USR_LED_Init	4	static
+../Src/Interrupts.c:37:6:USR_LED_Toggle	4	static
+../Src/Interrupts.c:43:6:TIM2_IRQHandler	8	static

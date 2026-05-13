@@ -1,19 +1,91 @@
-17:42:27 **** Build of configuration Debug for project Timer_Concept ****
+23:31:20 **** Build of configuration Debug for project PWM_Timer ****
 make -j8 all 
 arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
 arm-none-eabi-gcc "../Src/GPIO_Driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/GPIO_Driver.d" -MT"Src/GPIO_Driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/GPIO_Driver.o"
 arm-none-eabi-gcc "../Src/Interrupts.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/Interrupts.d" -MT"Src/Interrupts.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/Interrupts.o"
+arm-none-eabi-gcc "../Src/PWM_Functions.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/PWM_Functions.d" -MT"Src/PWM_Functions.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/PWM_Functions.o"
+arm-none-eabi-gcc "../Src/Timer_Peripheral.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/Timer_Peripheral.d" -MT"Src/Timer_Peripheral.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/Timer_Peripheral.o"
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
 arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
 arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "Timer_Concept.elf" @"objects.list"   -mcpu=cortex-m4 -T"F:\Knowledge_Update\Fundamentals\Embedded_Fundamentals\Timer_Concept\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Concept.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Timer_Concept.elf
+arm-none-eabi-gcc -o "PWM_Timer.elf" @"objects.list"   -mcpu=cortex-m4 -T"F:\Knowledge_Update\Fundamentals\Embedded_Fundamentals\PWM_Timer\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PWM_Timer.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PWM_Timer.elf
  
-arm-none-eabi-size  Timer_Concept.elf 
-arm-none-eabi-objdump -h -S Timer_Concept.elf  > "Timer_Concept.list"
+arm-none-eabi-size  PWM_Timer.elf 
+arm-none-eabi-objdump -h -S PWM_Timer.elf  > "PWM_Timer.list"
    text	   data	    bss	    dec	    hex	filename
-   1004	      0	   1568	   2572	    a0c	Timer_Concept.elf
+   1148	      0	   1568	   2716	    a9c	PWM_Timer.elf
 Finished building: default.size.stdout
  
-Finished building: Timer_Concept.list
+Finished building: PWM_Timer.list
+ 
+23:31:31 **** Incremental Build of configuration Debug for project PWM_Timer ****
+make -j8 all 
+arm-none-eabi-size  PWM_Timer.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1148	      0	   1568	   2716	    a9c	PWM_Timer.elf
+Finished building: default.size.stdout
+ 
+23:31:34 **** Incremental Build of configuration Debug for project PWM_Timer ****
+make -j8 all 
+arm-none-eabi-size  PWM_Timer.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1148	      0	   1568	   2716	    a9c	PWM_Timer.elf
+Finished building: default.size.stdout
+ 
+23:32:24 **** Incremental Build of configuration Debug for project PWM_Timer ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/PWM_Functions.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/PWM_Functions.d" -MT"Src/PWM_Functions.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/PWM_Functions.o"
+arm-none-eabi-gcc -o "PWM_Timer.elf" @"objects.list"   -mcpu=cortex-m4 -T"F:\Knowledge_Update\Fundamentals\Embedded_Fundamentals\PWM_Timer\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PWM_Timer.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PWM_Timer.elf
+ 
+arm-none-eabi-size  PWM_Timer.elf 
+arm-none-eabi-objdump -h -S PWM_Timer.elf  > "PWM_Timer.list"
+   text	   data	    bss	    dec	    hex	filename
+   1148	      0	   1568	   2716	    a9c	PWM_Timer.elf
+Finished building: default.size.stdout
+ 
+Finished building: PWM_Timer.list
+ 
+23:33:48 **** Incremental Build of configuration Debug for project PWM_Timer ****
+make -j8 all 
+arm-none-eabi-size  PWM_Timer.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1148	      0	   1568	   2716	    a9c	PWM_Timer.elf
+Finished building: default.size.stdout
+ 
+23:33:52 **** Incremental Build of configuration Debug for project PWM_Timer ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/PWM_Functions.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/PWM_Functions.d" -MT"Src/PWM_Functions.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/PWM_Functions.o"
+arm-none-eabi-gcc -o "PWM_Timer.elf" @"objects.list"   -mcpu=cortex-m4 -T"F:\Knowledge_Update\Fundamentals\Embedded_Fundamentals\PWM_Timer\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PWM_Timer.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PWM_Timer.elf
+ 
+arm-none-eabi-size  PWM_Timer.elf 
+arm-none-eabi-objdump -h -S PWM_Timer.elf  > "PWM_Timer.list"
+   text	   data	    bss	    dec	    hex	filename
+   1148	      0	   1568	   2716	    a9c	PWM_Timer.elf
+Finished building: default.size.stdout
+ 
+Finished building: PWM_Timer.list
+ 
+23:34:25 **** Incremental Build of configuration Debug for project PWM_Timer ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/PWM_Functions.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device/ST/STM32F4xx/Include" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Device" -I"F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/Interrupt_Concept/Headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/PWM_Functions.d" -MT"Src/PWM_Functions.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/PWM_Functions.o"
+arm-none-eabi-gcc -o "PWM_Timer.elf" @"objects.list"   -mcpu=cortex-m4 -T"F:\Knowledge_Update\Fundamentals\Embedded_Fundamentals\PWM_Timer\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PWM_Timer.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PWM_Timer.elf
+ 
+arm-none-eabi-size  PWM_Timer.elf 
+arm-none-eabi-objdump -h -S PWM_Timer.elf  > "PWM_Timer.list"
+   text	   data	    bss	    dec	    hex	filename
+   1148	      0	   1568	   2716	    a9c	PWM_Timer.elf
+Finished building: default.size.stdout
+ 
+Finished building: PWM_Timer.list
+ 
+23:34:28 **** Incremental Build of configuration Debug for project PWM_Timer ****
+make -j8 all 
+arm-none-eabi-size  PWM_Timer.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1148	      0	   1568	   2716	    a9c	PWM_Timer.elf
+Finished building: default.size.stdout
  

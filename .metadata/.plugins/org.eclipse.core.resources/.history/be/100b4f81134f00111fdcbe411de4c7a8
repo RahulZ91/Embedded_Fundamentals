@@ -1,0 +1,32 @@
+/*
+ * PWM_Functions.c
+ *
+ *  Created on: May 13, 2026
+ *      Author: hp
+ */
+
+#include "PWM_Functions.h"
+#include "stm32f446xx.h"
+
+void PWM_init(void)
+{
+	//Enable the clock for timer 2
+	RCC->APB1ENR |= (1<<0);
+
+	//Configure the timer
+	TIM2->PSC =15999; // 16000 - 1
+	//TIM2->ARR =2999; //3000 - 1
+	TIM2->ARR =0; //10000 - 1
+
+	//Choosing PWM mode 1 which is upcount
+	TIM2->CCMR1 &= ~(0x7<<4);
+	TIM2->CCMR1 |=(0x6<<4);
+
+	//Configure the CCR
+	TIM2->CCR1 = 5000;
+	TIM2->CCER |=(0x1<<0);
+
+	//Enable timer
+	TIM2->CR1 |=(1<<0);
+
+}
