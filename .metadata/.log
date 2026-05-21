@@ -482,3 +482,36 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-05-21 15:33:48.294
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2026-05-21 15:37:08.009 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data file:/F:/Knowledge_Update/Fundamentals/Embedded_Fundamentals/
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-05-21 15:37:14.060
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-05-21 15:37:14.062
+!MESSAGE Log4j2 initialized with config file F:\Knowledge_Update\Fundamentals\Embedded_Fundamentals\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-05-21 15:37:22.570
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2026-05-21 15:38:08.868 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data F:\Knowledge_Update\Fundamentals\Embedded_Fundamentals
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-05-21 15:38:15.752
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-05-21 15:38:15.754
+!MESSAGE Log4j2 initialized with config file F:\Knowledge_Update\Fundamentals\Embedded_Fundamentals\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-05-21 15:38:23.974
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-05-21 15:39:16.729
+!MESSAGE Indexed 'ADC_Driver' (10 sources, 64 headers) in 3.19 sec: 2,941 declarations; 4,134 references; 3 unresolved inclusions; 30 syntax errors; 707 unresolved names (9.1%)
