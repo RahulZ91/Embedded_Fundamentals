@@ -89,3 +89,10 @@ arm-none-eabi-size  PWM_Timer.elf
    1148	      0	   1568	   2716	    a9c	PWM_Timer.elf
 Finished building: default.size.stdout
  
+23:29:17 **** Incremental Build of configuration Debug for project PWM_Timer ****
+make -j8 all 
+arm-none-eabi-size  PWM_Timer.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1148	      0	   1568	   2716	    a9c	PWM_Timer.elf
+Finished building: default.size.stdout
+ 
